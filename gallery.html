@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body background="background2.jpg">
+<br />
+	<h3 align="center">
+	    <font face="Lato" size="8">NDR</font>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	    <font face="cinzel">
+		<a href="index.html">HOME</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="biodata.html">BIODATA</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	
+                <a href="family.html">FAMILY</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="experience.html">EXPERIENCE</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="education.html">EDUCATION</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="gallery.html">GALLERY</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   
+    <title>GALLERY</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;background-color: #f4f4f9;color: #333;margin: 0;padding: 0;
+        }
+
+        h1 {
+            text-align: center;padding: 10px;background-color: #2c3e50;color: white;font-size: 50px;
+        
+        }
+
+        .gallery-container {
+            display: grid;grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));gap: 20px;padding: 20px;max-width: 1200px;margin:0 auto;
+          
+        }
+
+        .gallery-item {
+            position: relative;overflow: hidden;border-radius: 10px;box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);background-color: #fff;transition: transform 0.3s ease-in-out;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .gallery-item img {
+            width: 100%;height: auto;display: block;border-radius: 10px;
+        }
+
+        .overlay {
+            position: absolute;background: rgba(0, 0, 0, 0.4);top: 0;left: 0;right: 0;
+            bottom: 0;color: white;display: flex;justify-content: center;align-items: center;font-size: 18px;border-radius: 10px;transition: opacity 0.3s ease-in-out;
+        }
+
+        .gallery-item:hover .overlay {
+            opacity: 1;
+        }
+
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 30px;
+            color: white;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 5px 10px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+</style>
+</head>
+<body>
+
+    <h1>MY GALLERY</h1>
+
+    <div class="gallery-container">
+        <!-- Gallery Item 1 -->
+        <div class="gallery-item" onclick="openLightbox('gallery1.jpg')">
+            <img src="dini.jpg" alt="Image 1">
+            <p> ME
+            <div class="background2.jpg">Click to View</div>
+        </div>
+        <!-- Gallery Item 2 -->
+        <div class="gallery-item" onclick="openLightbox('gallery2.jpg')">
+            <img src="family.jpg" alt="Image 2">
+            <p> MY FAMILY
+            <div class="background2">Click to View</div>
+        </div>
+        <!-- Gallery Item 3 -->
+        <div class="gallery-item" onclick="openLightbox('gallery3.jpg')">
+            <img src="friends.jpg" alt="Image 3">
+            <p> MY FRIEND
+            <div class="background2">Click to View</div>
+        </div>
+        <!-- Gallery Item 4 -->
+        <div class="gallery-item" onclick="openLightbox('gallery4.jpg')">
+            <img src="miqael.jpg" alt="Image 4">
+        <p> NEPHEW
+            <div class="background2">Click to View</div>
+        </div>
+  
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-close" onclick="closeLightbox()">X</div>
+        <img id="lightbox-image" src="" alt="Lightbox Image">
+    </div>
+
+    <script>
+        // Open Lightbox
+        function openLightbox(imageSrc) {
+            document.getElementById('lightbox').style.display = 'flex';
+            document.getElementById('lightbox-image').src = imageSrc;
+        }
+
+        // Close Lightbox
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>
+
+</body>
+</html>
